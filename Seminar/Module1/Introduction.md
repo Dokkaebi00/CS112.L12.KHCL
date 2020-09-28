@@ -1,8 +1,11 @@
 # Introduction
-We're actually using geometric algorithms all the time in everyday life
+We're actually using geometric algorithms all the time in everyday life. Some examples of geometric problems:
+- Range searching
+- Nearest neighbor finding
+- Line segment intersections
 
 Geometric algorithm also play a large role in applications. For instant:
-- Computer graphics and aided design:
+- Computer graphics and computer aided design (CAD)
   - Geometry processing
   - Geometric modelling
 - Motion planning in robotics
