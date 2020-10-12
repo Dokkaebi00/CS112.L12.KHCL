@@ -22,3 +22,21 @@ $\qquad$e = Q.extractMin();<br>
 $\qquad$// handle event:<br>
 $\qquad$Update sweep line status<br>
 $\qquad$Discover new upcoming events and insert them into Q<br>
+
+### Plane sweep PseudoCode:
+```python
+def sweepLineIntersection(Points[0..2n-1]):
+    1. Sort Points[] from left to right (according to x coordinate)
+    2. Create an empty Self-Balancing BST(AVL tree) T. It will contain all active line Segments ordered by y coordinate.
+    # Process all 2n points 
+    3. for i in range(2n-1):
+        # If this point is left end of its line 
+        if (Points[i].isLeft):
+            T.insert(Points[i].line())
+        # Check if this points intersects with its predecessor and successor
+        if ( doIntersect(Points[i].line(), T.pred(Points[i].line()) )
+            return true
+        if ( doIntersect(Points[i].line(), T.succ(Points[i].line()) )
+            return true
+    4. return False
+```
