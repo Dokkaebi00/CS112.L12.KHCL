@@ -33,10 +33,15 @@ def sweepLineIntersection(Points[0..2n-1]):
         # If this point is left end of its line 
         if (Points[i].isLeft):
             T.insert(Points[i].line())
-        # Check if this points intersects with its predecessor and successor
-        if ( doIntersect(Points[i].line(), T.pred(Points[i].line()) )
+            # Check if this points intersects with its predecessor and successor
+            if ( doIntersect(Points[i].line(), T.pred(Points[i].line()) ):
+                return true
+            if ( doIntersect(Points[i].line(), T.succ(Points[i].line()) ):
+                return true
+        else:  # If it's a right end of its line
+        # Check if its predecessor and successor intersect with each other
+        if ( doIntersect(T.pred(Points[i].line(), T.succ(Points[i].line())):
             return true
-        if ( doIntersect(Points[i].line(), T.succ(Points[i].line()) )
-            return true
+        T.delete(Points[i].line())  // Delete from tree
     4. return False
 ```
